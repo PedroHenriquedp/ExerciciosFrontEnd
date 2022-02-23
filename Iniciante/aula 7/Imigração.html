@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>POLICIA FEDERAL - Imigração</title>
+  <style> 
+      body{
+        background-color: #ef454a;
+        color:whitesmoke;
+        font: normal 20pt Arial;
+      }
+  </style>
+</head>
+<body>
+<h1><strong>IMIGRAÇÃO</strong></h1>
+  Nacionalidade <input type="text" name="txtnal" id="txtnal">
+                <input type="button" value="Verificar" onclick= "verificar()">
+  <div id= "res">
+
+  </div>
+  <script>
+        // document.write "bem-vindo"
+        function verificar(){
+        var txtv = window.document.querySelector('input#txtnal')
+        var res = window.document.querySelector('div#res')
+        var nal = String(txtv.value)
+        res.innerHTML = `<p>Sua nacionalidade é <strong>${nal}</strong>`
+        if (nal != 'Brasileira'){ 
+            res.innerHTML += `<p> Você é estrangeiro`
+        } else {
+            res.innerHTML +=`よこそ !`
+        }
+      }
+
+  </script>
+</body>
+</html>
